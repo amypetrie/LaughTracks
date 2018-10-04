@@ -1,0 +1,49 @@
+header {
+    width: 100%;
+    background-color: #404F51;
+    padding: 10px;
+    margin: 0px;
+    position: relative;
+}
+
+#site_header {
+    font-size: 30px;
+    color: white;
+    padding: 2px;
+}
+
+#site_one_liner {
+    width: 100%;
+    background-color: #D6FAFE;
+    font-size: 20px;
+    padding: 3px;
+}
+
+body {
+    background-color: #D5D5D5;
+}
+
+#all_content {
+  column-count: 2;
+}
+
+.stats {
+  width: 50%;
+}
+
+.single_comedian {
+  background: white;
+}
+
+.comedian_info{
+    background: #7A7979;
+}
+
+.comedian_specials{
+    background: #7A7979;
+}
+
+img {
+  width: 60px;
+  height: 75px
+}

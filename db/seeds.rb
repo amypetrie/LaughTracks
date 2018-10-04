@@ -1,13 +1,16 @@
 require './app/models/comedian.rb'
 require './app/models/special.rb'
+require "database_cleaner"
+DatabaseCleaner.strategy = :truncation
+DataBaseCleaner.clean
 
 kevin_h = Comedian.create(name: "Kevin Hart", age: 39, city: "Philadelphia, PA" )
-kevin_special_1 = kevin_h.specials.create(title: "I'm a Grown Little Man", run_time: 60)
-kevin_special_2 = kevin_h.specials.create(title: "Laugh at My Pain", run_time: 85)
+kevin_special_1 = kevin_h.specials.create(title: "I'm a Grown Little Man", run_time: 60, image_url: "https://m.media-amazon.com/images/M/MV5BMjI4MTYwNTUzMF5BMl5BanBnXkFtZTcwODk1Mjk3Mw@@._V1_.jpg")
+kevin_special_2 = kevin_h.specials.create(title: "Laugh at My Pain", run_time: 85, image_url: "https://m.media-amazon.com/images/M/MV5BMjI4NjA5NTI0OV5BMl5BanBnXkFtZTcwMTU0MzI1Ng@@._V1_.jpg")
 
 jerry_s = Comedian.create(name: "Jerry Seinfeld", age: 64, city: "New York City, NY" )
-jerry_special_1 = jerry_s.specials.create(title: "Jerry Before Seinfeld", run_time: 45)
-jerry_special_2 = jerry_s.specials.create(title: "I'm Telling You for the Last Time", run_time: 90)
+jerry_special_1 = jerry_s.specials.create(title: "Jerry Before Seinfeld", run_time: 45, image_url: "https://m.media-amazon.com/images/M/MV5BOTc2N2I0Y2UtOTgyYy00MTU3LTk1YzItZGIwMDcxY2JkMGQzXkEyXkFqcGdeQXVyMjQzNzk2ODk@._V1_.jpg")
+jerry_special_2 = jerry_s.specials.create(title: "I'm Telling You for the Last Time", run_time: 90, image_url: "https://m.media-amazon.com/images/M/MV5BNDM4OTY0NTAyMF5BMl5BanBnXkFtZTcwNTcxMDQyMQ@@._V1_.jpg")
 
 sarah_s = Comedian.create(name: "Sarah Silverman", age: 47, city: "Bedford, NH" )
 sarah_special_1 = sarah_s.specials.create(title: "We Are Miracles", run_time: 75)

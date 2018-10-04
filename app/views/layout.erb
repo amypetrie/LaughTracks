@@ -1,7 +1,30 @@
 <html>
 <head>
+  <title>LaughingStock</title>
+  <link rel = "stylesheet" type = "text/css" href = "main.css" />
 </head>
 <body>
+  <header>
+    <div id=site_header>LaughingStock</div>
+    <div id=site_one_liner>Your favorite comedians - all in one place!</div>
+  </header>
+  <div class="stats">
+    <h2>Comedian Statistics</h2>
+    <ul id="stat_bullets">
+      <li><b>Comedian average age:</b> <%=(Comedian.all.average(:age)).round%></li>
+      <li><b>Average run time of specials:</b> <%=(Special.all.average(:run_time)).round%> minutes</li>
+      <li><b>Comedian birthplaces:</b>
+        <ul id="city_bullets">
+          <%cities = @comedians.distinct.pluck(:city)%>
+          <%cities.each do |city| %>
+          <li><%=city%></li>
+          <%end%>
+        </ul>
+      </li>
+    </ul>
+  </div>
+<div id="all_content">
   <%= yield %>
+</div>
 </body>
 </html>
