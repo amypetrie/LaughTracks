@@ -1,10 +1,6 @@
 require './app/models/comedian.rb'
 require './app/models/special.rb'
-require 'activerecord-import/base'
 
-# comedian = Comedian.create(...)
-# special_1 = comedian.specials.create(...)
-# special_2 = comedian.special.create(...)
 kevin_h = Comedian.create(name: "Kevin Hart", age: 39, city: "Philadelphia, PA" )
 kevin_special_1 = kevin_h.specials.create(title: "I'm a Grown Little Man", run_time: 60)
 kevin_special_2 = kevin_h.specials.create(title: "Laugh at My Pain", run_time: 85)
@@ -37,11 +33,11 @@ steve_m = Comedian.create(name: "Steve Martin", age: 73, city: "Waco, TX")
 steve_special_1 = steve_m.specials.create(title: "Steve Martin’s Best Show Ever", run_time: 85)
 steve_special_2 = steve_m.specials.create(title: "All Commercials… A Steve Martin Special", run_time: 100)
 
-louis_ck = Comedian.create(name: "Louis C.K.", age: , city: )
+louis_ck = Comedian.create(name: "Louis C.K.", age: 51, city: "Washington, D.C.")
 louis_special_1 = louis_ck.specials.create(title: "Hilarious", run_time: 75)
 louis_special_2 = louis_ck.specials.create(title: "Shameless", run_time: 80)
 
-robin_w = Comedian.create(name: "Robin Williams", age: 51, city: "Washington, D.C.")
+robin_w = Comedian.create(name: "Robin Williams", age: 63, city: "Chicago, IL")
 robin_special_1 = robin_w.specials.create(title: "Weapons of Self-Destruction", run_time: 95)
 robin_special_2 = robin_w.specials.create(title: "Off the Wall", run_time: 70)
 
@@ -52,5 +48,3 @@ jeaneane_special_2 = jeaneane_g.specials.create(title: "The A List", run_time: 6
 eddie_m = Comedian.create(name: "Eddie Murphy", age: 57, city: "New York City, NY" )
 eddie_special_1 = eddie_m.specials.create(title: "Raw", run_time: 85)
 eddie_special_2 = eddie_m.specials.create(title: "Delirious", run_time: 80)
-
-puts "added #{comedian.specials.count} specials for #{comedian.name}."

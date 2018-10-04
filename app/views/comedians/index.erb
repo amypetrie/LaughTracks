@@ -1,10 +1,12 @@
-<% comedians.each do |song| %>
+<% @comedians.each do |comedian| %>
 <ul>
   <li><%= comedian.name %></li>
   <li><%= comedian.age %></li>
   <li><%= comedian.city %></li>
-  <% if comedian.special %>
-  <li><%= comedian.special.name %></li>
-  <% end %>
+  <li><%= comedian.specials.count %></li>
+  <!--
+  <% if comedian.specials %>
+  <li><%= comedian.specials.name %></li>
+  <% end %> -->
 </ul>
 <% end %>

@@ -5,7 +5,7 @@ class LaughTracksApp < Sinatra::Base
   end
 
   get '/comedians' do
-    comedians = Comedian.all
+    @comedians = Comedian.all
     erb :"comedians/index"
     # locals: {songs: songs}
   end
