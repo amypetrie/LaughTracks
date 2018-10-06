@@ -10,13 +10,13 @@ class LaughTracksApp < Sinatra::Base
     # locals: {songs: songs}
   end
 
+  get '/comedians?age=64' do
+    @comedian = Comedian.find(params[:age])
+    erb :"comedians/show"
+  end
+
   # get '/songs/new' do
   #   erb :"songs/new"
-  # end
-  #
-  # get '/songs/:id' do
-  #   @song = Song.find(params[:id])
-  #   erb :"songs/show"
   # end
   #
   # post '/songs' do

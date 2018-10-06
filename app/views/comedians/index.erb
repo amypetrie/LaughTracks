@@ -1,21 +1,31 @@
+<div class="stats">
+  <h2>Comedian Statistics</h2>
+  <div id="stat_bullets">
+    <p><b>Comedian average age:</b> <%=(Comedian.all.average(:age)).round%></p><p><b>Average run time of specials:</b> <%=(Special.all.average(:run_time))%> minutes</p></br>
+    <p><b>Comedian birthplaces:</b>
+      <div id="city_bullets">
+        <%cities = @comedians.distinct.pluck(:city)%>
+        <%cities.each do |city| %>
+        <li><%=city%></li>
+        <%end%>
+      </p></br>
+      </div>
+  </div>
+</div>
 <% @comedians.each do |comedian| %>
 <div class="single_comedian">
   <div class="comedian_info">
-<ul>
-  <li><%= comedian.name %></li>
-  <li><%= comedian.age %></li>
-  <li><%= comedian.city %></li>
+  <p><%= comedian.name %></br>
+  <%= comedian.age %></br>
+  <%= comedian.city %></p>
   </div>
   <% comedian.specials.each do |s| %>
   <div class="comedian_specials">
     <div class="specials_info">
-  <ul>
-    <li>Title: <%= s.title %>, Run Time: <%= s.run_time %> minutes</li>
+    <p><%= s.title %> </br> Run Time: <%= s.run_time %> minutes</p>
     <img src="<%= s.image_url %>" class="img">
     </div>
-  </ul>
   </div>
     <% end %>
-  </ul>
 </div>
 <% end %>
