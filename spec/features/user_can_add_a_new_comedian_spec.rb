@@ -1,7 +1,6 @@
-RSpec.describe 'user sees comedian specific page by criteria' do
-  describe 'when user types URL query by comedian attribute' do
-    it 'should only show the applicable comedian info on the page' do
-
+RSpec.describe 'Create a new comedian' do
+  describe 'as a visitor' do
+    it 'should allow me to create a new comedian' do
       kevin_h = Comedian.create(name: "Kevin Hart", age: 39, city: "Philadelphia, PA" )
       kevin_special_1 = kevin_h.specials.create(title: "I'm a Grown Little Man", run_time: 60, image_url: "https://m.media-amazon.com/images/M/MV5BMjI4MTYwNTUzMF5BMl5BanBnXkFtZTcwODk1Mjk3Mw@@._V1_.jpg")
       kevin_special_2 = kevin_h.specials.create(title: "Laugh at My Pain", run_time: 85, image_url: "https://m.media-amazon.com/images/M/MV5BMjI4NjA5NTI0OV5BMl5BanBnXkFtZTcwMTU0MzI1Ng@@._V1_.jpg")
@@ -22,10 +21,17 @@ RSpec.describe 'user sees comedian specific page by criteria' do
       joan_special_1 = joan_r.specials.create(title: "Don’t Start with Me", run_time: 60, image_url: "https://m.media-amazon.com/images/M/MV5BMjE4NzIxNjc0OF5BMl5BanBnXkFtZTcwODA5MTQzMg@@._V1_.jpg")
       joan_special_2 = joan_r.specials.create(title: "An Audience with Joan Rivers", run_time: 65, image_url: "https://m.media-amazon.com/images/M/MV5BMTU4Nzg3MTM5OF5BMl5BanBnXkFtZTcwODI3NjM4OA@@._V1_.jpg")
 
-      visit '/comedians?age=64'
+      visit '/comedians/new'
 
+      fill_in("comedian[name]", with: "Amy Petrie")
+      fill_in("comedian[age]", with: 26)
+      fill_in("comedian[city]", with: "Hinsdale, IL")
+      click_button "Submit"
+      last_comedian = Comedian.last
+
+      expect(current_path).to eq("/comedians")
       within('.comedian_content') do
-        expect(page).to_not have_content(kevin_h.name)
+        expect(page).to have_content("Amy Petrie")
       end
     end
   end
