@@ -1,76 +1,96 @@
 body {
-  display: flex;
-  flex-direction: column;
-  background-image: linear-gradient(left, #D6FAFE 10%, #506a6d 100%), linear-gradient(left, #D6FAFE 10%, #506a6d 100%);
-  background-image: linear-gradient(to right, #D6FAFE 10%, #506a6d 100%), linear-gradient(to right, #D6FAFE 10%, #506a6d 100%);
+  margin: 0px;
+  font: normal normal 14px/18px Georgia,sans-serif;
 }
 
 header {
-    background-color: #404F51;
+  background-color: #353044eb;
     padding: 10px;
 }
 
 #site_header {
     font-size: 30px;
     color: white;
-    padding: 2px;
+    padding: 10px;
 }
 
 #site_one_liner {
-    width: 100%;
-    background-color: #D6FAFE;
-    font-size: 20px;
-    padding: 3px;
+  color: #e0c7c7;
+  font-size: 20px;
 }
 
 
-#yield_content {
+.page {
+  font-size: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: row;
+  background-image: linear-gradient(left, #e5cdecbd 10%, #5829dcad 100%), linear-gradient(left, #e5cdecbd 10%, #5829dca6 100%);
+  background-image: linear-gradient(to right, #e5cdecbd 10%, #36198a00 100%), linear-gradient(to right,#e5cdecbd 10%, #763979e0 100%);
 }
 
 .stats {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  background-color: rgba(50, 46, 53, 0.22);
+  padding-left: 20px;
+  padding-right: 20px;
+  list-style: none;
+  font-size: 13px;
 }
 
-#stat_bullets {
-  text-align: left;
-}
-.single_comedian {
-  display: flex;
-  flex-direction: row;
-  background: white;
-  margin: 20px;
+#about_title {
+  display: block;
+  font-size: 15px;
+  background-color: whitesmoke;
   border-radius: 10px;
-  align-items: stretch;
-  justify-content: stretch;
+  padding: 3px;
 }
 
-.comedian_info{
-    display: grid;
-    background: #7A7979;
-    text-align: center;
+#stat_section {
+  display: block;
+  list-style: none;
+  font-size: 13px;
+
+}
+
+.comedian_content{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     border-radius: 10px;
     font-size: 20px;
     margin: 10px;
-    padding: 10px;
-    align-items: center;
+    background-color: rgba(38, 28, 74, 0);
+}
+
+#comedian_name {
+  border-bottom: 1px solid;
+  font-size: 120%;
+  padding: 5px;
+}
+
+#comedian_info{
+  display: block;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 95%;
 }
 
 .comedian_specials{
-  padding: 20px;
-  margin: 10px;
-  display: grid;
-  background: #7A7979;
-  border-radius: 10px;
-  text-align: center;
+  display: block;
+}
 
+#individual_special {
+  display: flex;
+  flex-direction: row;
+  font-size: 75%;
 }
 
 img {
   margin: 10px;
   width: 60px;
-  height: 75px
+  height: 75px;
+  display: block;
 }

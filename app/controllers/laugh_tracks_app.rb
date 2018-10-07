@@ -1,4 +1,5 @@
 class LaughTracksApp < Sinatra::Base
+  set :method_override, true
 
   get '/' do
    redirect "/comedians"
@@ -6,22 +7,13 @@ class LaughTracksApp < Sinatra::Base
 
   get '/comedians' do
     @comedians = Comedian.all
-    erb :"comedians/index"
-    # locals: {songs: songs}
+    @specials = Special.all
+    if @comedians.where(age: params[:age]).empty? == true
+      erb :'comedians/index'
+    else
+      @comedians = Comedian.where(age: params[:age])
+      erb :'comedians/show'
+    end
   end
-
-  get '/comedians?age=64' do
-    @comedian = Comedian.find(params[:age])
-    erb :"comedians/show"
-  end
-
-  # get '/songs/new' do
-  #   erb :"songs/new"
-  # end
-  #
-  # post '/songs' do
-  #   song = Song.create(params[:song])
-  #   redirect "/songs/#{song.id}"
-  # end
 
 end
