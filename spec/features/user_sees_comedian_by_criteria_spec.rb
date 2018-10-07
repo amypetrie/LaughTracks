@@ -5,7 +5,7 @@ RSpec.describe 'user sees comedian specific page by criteria' do
       amy = Comedian.create(name: "amy petrie", age: 50, city: "Chicago, IL" )
       julie = Comedian.create(name: "julie turgeon", age: 64, city: "Berkeley, CA" )
       visit '/comedians?age=64'
-save_and_open_page
+
       expect(page).to_not have_content(amy.name)
     end
   end

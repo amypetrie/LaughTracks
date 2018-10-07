@@ -7,7 +7,7 @@ RSpec.describe 'user sees the comedians index page' do
       seymore = Comedian.create(name: "seymore fries", age: 10, city: "Berkeley, CA" )
       visit '/'
 
-      within('#stat_bullets') do
+      within('.stats') do
       expect(page).to have_content(Comedian.all.average(:age).round)
       end
     end
