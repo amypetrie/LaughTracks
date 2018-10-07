@@ -11,12 +11,8 @@ class LaughTracksApp < Sinatra::Base
       erb :'comedians/index'
     else
       @comedians = Comedian.where(age: params[:age])
-      redirect "/comedians/show"
+      erb :'comedians/show'
     end
-  end
-
-  get '/comedians/show' do
-    erb :'comedians/show'
   end
 
 end
