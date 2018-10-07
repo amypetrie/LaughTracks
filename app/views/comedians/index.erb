@@ -5,7 +5,7 @@
   <div id="stats_section">
     <div id="about_title">General Information:</div>
     <p><li><b>Average age:</b> <%=(Comedian.all.average(:age)).round%></li></br>
-       <li><b>Average run time of specials:</b> <%=(Special.all.average(:run_time))%> minutes</li></p>
+       <li><b>Average run time of specials:</b> <%=(Special.all.average(:run_time)).round %> minutes</li></p>
      </div>
   <div id="stat_section">
     <div id="about_title">Comedian birthplaces:</div>

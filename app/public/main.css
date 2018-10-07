@@ -1,17 +1,17 @@
 body {
   margin: 0px;
+  font: normal normal 14px/18px Georgia,sans-serif;
 }
 
 header {
   background-color: #353044eb;
     padding: 10px;
-    border-b
 }
 
 #site_header {
     font-size: 30px;
     color: white;
-    padding: 2px;
+    padding: 10px;
 }
 
 #site_one_liner {
@@ -36,11 +36,12 @@ header {
   padding-left: 20px;
   padding-right: 20px;
   list-style: none;
+  font-size: 13px;
 }
 
 #about_title {
   display: block;
-  font: 100%;
+  font-size: 15px;
   background-color: whitesmoke;
   border-radius: 10px;
   padding: 3px;
@@ -49,7 +50,7 @@ header {
 #stat_section {
   display: block;
   list-style: none;
-  text-
+  font-size: 13px;
 
 }
 
@@ -90,5 +91,6 @@ header {
 img {
   margin: 10px;
   width: 60px;
-  height: 75px
+  height: 75px;
+  display: block;
 }
