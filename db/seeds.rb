@@ -33,8 +33,8 @@ amy_special_1 = amy_s.specials.create(title: "The Leather Special", run_time: 75
 amy_special_2 = amy_s.specials.create(title: " Live at the Apollo", run_time: 70, image_url: "https://m.media-amazon.com/images/M/MV5BMTkzMzU1MTc3M15BMl5BanBnXkFtZTgwNjYyMjQ5NjE@._V1_.jpg")
 
 steve_m = Comedian.create(name: "Steve Martin", age: 73, city: "Waco, TX")
-steve_special_1 = steve_m.specials.create(title: "Steve Martin’s Best Show Ever", run_time: 85, image_url: "https://m.media-amazon.com/images/M/MV5BMTI5ZjQzNzktYTk2OS00ZWFiLWFlMjctNGZjMTU3NjAyMjEyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg")
-steve_special_2 = steve_m.specials.create(title: "All Commercials… A Steve Martin Special", run_time: 100, image_url: "https://m.media-amazon.com/images/M/MV5BZTFlMjI0ZmUtMzdhNS00YTdjLTgzZTctYzhhZjg3MTE1Nzk0XkEyXkFqcGdeQXVyNTM3MDMyMDQ@._V1_.jpg")
+steve_special_1 = steve_m.specials.create(title: "Best Show Ever", run_time: 85, image_url: "https://m.media-amazon.com/images/M/MV5BMTI5ZjQzNzktYTk2OS00ZWFiLWFlMjctNGZjMTU3NjAyMjEyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg")
+steve_special_2 = steve_m.specials.create(title: "All Commercials…", run_time: 100, image_url: "https://m.media-amazon.com/images/M/MV5BZTFlMjI0ZmUtMzdhNS00YTdjLTgzZTctYzhhZjg3MTE1Nzk0XkEyXkFqcGdeQXVyNTM3MDMyMDQ@._V1_.jpg")
 
 louis_ck = Comedian.create(name: "Louis C.K.", age: 51, city: "Washington, D.C.")
 louis_special_1 = louis_ck.specials.create(title: "Hilarious", run_time: 75, image_url: "https://m.media-amazon.com/images/M/MV5BNzIxMTUxMjYzMV5BMl5BanBnXkFtZTcwMDYwMjE0Nw@@._V1_.jpg")
