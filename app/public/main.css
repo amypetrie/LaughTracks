@@ -1,11 +1,15 @@
+
 body {
   margin: 0px;
   font: normal normal 14px/18px Georgia,sans-serif;
+  background-image: linear-gradient(to right, #e5cdecbd 10%, #36198a00 100%), linear-gradient(to right,#e5cdecbd 10%, #763979e0 100%);
+  font-size: 100%;
+  list-style: none;
 }
 
 header {
-  background-color: #353044eb;
-    padding: 10px;
+  background-color: #150a35;
+  padding: 10px;
 }
 
 #site_header {
@@ -19,14 +23,11 @@ header {
   font-size: 20px;
 }
 
-
 .page {
-  font-size: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: row;
-  background-image: linear-gradient(left, #e5cdecbd 10%, #5829dcad 100%), linear-gradient(left, #e5cdecbd 10%, #5829dca6 100%);
-  background-image: linear-gradient(to right, #e5cdecbd 10%, #36198a00 100%), linear-gradient(to right,#e5cdecbd 10%, #763979e0 100%);
+  min-height: 100%;
+  list-style: none;
 }
 
 .stats {
@@ -35,8 +36,8 @@ header {
   background-color: rgba(50, 46, 53, 0.22);
   padding-left: 20px;
   padding-right: 20px;
-  list-style: none;
   font-size: 13px;
+  list-style: none;
 }
 
 #about_title {
@@ -78,19 +79,26 @@ header {
   font-size: 95%;
 }
 
-.comedian_specials{
-  display: block;
-}
-
 #individual_special {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid: 150px / auto auto auto auto auto auto;
   font-size: 75%;
+  justify-content: space-around;
+  margin: 10px;
+  text-align: center;
 }
 
 img {
-  margin: 10px;
   width: 60px;
+  margin-left: 10px;
   height: 75px;
+  border: 3px solid;
+}
+
+#specials_info{
+  margin: 10px;
+}
+
+#comedian_form{
   display: block;
 }

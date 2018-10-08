@@ -1,6 +1,6 @@
 RSpec.describe 'user sees the comedians index page' do
   describe 'when user visits the site' do
-    it 'should should show the comedians index page' do
+    it 'should should show the comedians average age and average special length' do
       kevin_h = Comedian.create(name: "Kevin Hart", age: 39, city: "Philadelphia, PA" )
       kevin_special_1 = kevin_h.specials.create(title: "I'm a Grown Little Man", run_time: 60, image_url: "https://m.media-amazon.com/images/M/MV5BMjI4MTYwNTUzMF5BMl5BanBnXkFtZTcwODk1Mjk3Mw@@._V1_.jpg")
       kevin_special_2 = kevin_h.specials.create(title: "Laugh at My Pain", run_time: 85, image_url: "https://m.media-amazon.com/images/M/MV5BMjI4NjA5NTI0OV5BMl5BanBnXkFtZTcwMTU0MzI1Ng@@._V1_.jpg")
@@ -23,7 +23,7 @@ RSpec.describe 'user sees the comedians index page' do
       visit '/'
 
       within('.stats') do
-      expect(page).to have_content(Comedian.all.average(:age).round)
+      expect(page).to have_content("Average age: 57")
       end
     end
   end
