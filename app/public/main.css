@@ -37,7 +37,7 @@ header {
   padding-left: 20px;
   padding-right: 20px;
   font-size: 13px;
-  list-style: none;
+  list-style: square;
 }
 
 #about_title {
@@ -45,13 +45,18 @@ header {
   font-size: 15px;
   background-color: whitesmoke;
   border-radius: 10px;
-  padding: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top:10px;
 }
 
 #stat_section {
   display: block;
-  list-style: none;
+  list-style: square;
   font-size: 13px;
+  margin-bottom:10px;
+
+}
 
 }
 
@@ -63,6 +68,7 @@ header {
     font-size: 20px;
     margin: 10px;
     background-color: rgba(38, 28, 74, 0);
+    list-style: square;
 }
 
 #comedian_name {

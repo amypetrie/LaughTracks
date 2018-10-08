@@ -21,7 +21,7 @@ RSpec.describe 'user sees the comedians index page' do
       joan_special_1 = joan_r.specials.create(title: "Don’t Start with Me", run_time: 60, image_url: "https://m.media-amazon.com/images/M/MV5BMjE4NzIxNjc0OF5BMl5BanBnXkFtZTcwODA5MTQzMg@@._V1_.jpg")
       joan_special_2 = joan_r.specials.create(title: "An Audience with Joan Rivers", run_time: 65, image_url: "https://m.media-amazon.com/images/M/MV5BMTU4Nzg3MTM5OF5BMl5BanBnXkFtZTcwODI3NjM4OA@@._V1_.jpg")
       visit '/'
-
+      save_and_open_page
       within('.stats') do
       expect(page).to have_content("Average age: 57")
       end
